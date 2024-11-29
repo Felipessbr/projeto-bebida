@@ -1,0 +1,613 @@
+/*ESTILO GERAL*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+.btn-contato button{
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(128, 23, 23);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+
+    }
+
+    h2.titulo{
+        color: aliceblue;
+        font-size: 50px;
+        text-align: center;
+
+    }
+    h2.titulo span{
+        color: darkred;
+        font-size: 50px;        
+    }
+
+    .efeito-top, .efeito-img, .efeito-especialidades1, .efeito-especialidades2, .efeito-especialidades3,.efeito-t{
+        visibility: hidden;
+    }
+    .sobre-efeito,.p-efeito, .im1, .im2, .im3, .titulo, .a1, .a2, .a3, .a4, .a5{
+        visibility: hidden;
+    }
+
+    
+/* ESTILO DO CABEÇALHO */
+header{
+    padding: 40px 4%;
+}
+header .logo img{
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+}
+header >.interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+header a{
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+}
+header nav.menu-desktop a:hover{
+color: rgb(123, 23, 23);
+transform: scale(1.2);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* ESTILO DO MENU MOBILE */
+.btn-abrir-menu{
+    color: #4e1515;
+    font-size: 40px;
+    display: none;
+
+}
+.overley-menu{
+    background-color: #000000ca;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+.munu-mobile{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .4s;
+
+}
+.munu-mobile.abrir-menu{
+    width: 70%;
+}
+.munu-mobile.abrir-menu ~.overley-menu{
+    display: block;
+}
+
+.munu-mobile .btn-fechar i{
+    color: #4e1515;
+    font-size: 30px;
+
+}
+
+.munu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+.munu-mobile nav ul{
+    text-align: right;
+    flex-direction: column;
+    display: flex;
+}
+.munu-mobile nav ul a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.munu-mobile nav ul a:hover{
+    background-color: #301010;
+}
+
+/* ESTILO DO SITE */
+section.topo-do-site{
+    padding: 40px 4%;
+    margin-bottom: 22%;
+}
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.topo-do-site h1{
+    color: aliceblue;
+    font-size: 42px;
+    line-height: 40px;
+
+}
+.topo-do-site h1 span{
+    color: darkred;
+    font-size: 70px;
+}
+.topo-do-site p{
+    color: aliceblue;
+    margin: 40px 0%;
+}
+.topo-do-site .img-topo-site img{
+    border-radius: 10px;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+
+/* ESTILO DAS ESPECIALIDADES */
+section.especialiadades{
+    padding: 8% 4%;
+    
+}
+section.especialiadades .flex{
+    gap: 60px;
+}
+
+.especialiadades .especialiadades-box{
+    color: aliceblue;
+    padding:40px ;
+    border-radius: 40px;
+    margin-top: 0px;
+    transition: .5s;
+}
+.especialiadades .especialiadades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 3px 0px #ff000038;
+}
+.especialiadades .especialiadades-box i{
+    font-size: 70px;
+    color: darkred;
+}
+.especialiadades .especialiadades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+
+}
+ /* PORTFÓLIO */
+section.portfolio {
+    padding: 80px 8%;
+}
+
+.img-port {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+section.portfolio .flex {
+    gap: 60px;
+}
+/* ESTILO  SOBRE */
+section.sobre{
+    padding: 40px 4%;
+
+}
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre {
+    color: aliceblue;
+    
+    
+}
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.sobre .txt-sobre h2 span{
+    color:darkred;
+    display: block;
+}
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+    color: rgb(247, 247, 247);
+
+}
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: darkred;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 20px 5px;
+    transition: .8s;
+    }
+
+.sobre .img-sobre img{
+        border-radius: 20px;
+        height: 400px;
+        width: 300px;
+        object-fit: cover;
+    }
+
+    /* ESTILO DO PORTFÓLIO */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+
+footer .line-footer p i {
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #fff;
+}
+/* ESTILO DO PORTFÓLIO */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: darkred;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid darkred;
+}
+
+footer .line-footer p i {
+    color: darkred;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #fff;
+}
+
+@media screen and (max-width: 1020px) {
+
+    /* CLASSES GERAIS */
+    .flex {
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    /* CABEÇALHO */
+    .menu-desktop,
+    .btn-contato  {
+        display: none;
+    }
+    .btn-abrir-menu{
+        display: block;
+    }
+
+    /* TOPO DO SITE */
+
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
+
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+    }
+
+    /* ESPECIALIDADES */
+    section.especiliadades {
+        padding: 40px 8%;
+    }
+
+    /* SOBRE */
+    section.sobre {
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+    
+    .btn-social{
+        text-align: center;
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /* PORTFÓLIO */
+    section.portfolio {
+        padding: 80px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    
+    section.portfolio .flex {
+    gap: 60px;
+    }
+
+/* RODAPÉ */
+footer .flex {
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer .line-footer {
+    text-align: center;
+}
+
+
+}
