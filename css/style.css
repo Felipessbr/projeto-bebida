@@ -190,7 +190,7 @@ section.topo-do-site .flex{
 
 /* ESTILO DAS ESPECIALIDADES */
 section.especialiadades{
-    padding: 8% 4%;
+    padding: 20px 4%;
     
 }
 section.especialiadades .flex{
@@ -207,6 +207,13 @@ section.especialiadades .flex{
 .especialiadades .especialiadades-box:hover{
     transform: scale(1.05);
     box-shadow: 3px 3px 0px #ff000038;
+}
+section.especialiadades h2 {
+    font-size: 2.3rem;
+    margin-bottom: 50px;
+}
+section.especialiadades h2 span{
+    font-size: 2.3rem;
 }
 .especialiadades .especialiadades-box i{
     font-size: 70px;
